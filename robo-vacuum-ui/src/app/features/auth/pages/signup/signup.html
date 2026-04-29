@@ -1,0 +1,21 @@
+<main class="signup-shell">
+  <section class="signup-panel">
+    <div class="signup-intro">
+      <p class="eyebrow">Account Setup</p>
+      <h2>Prepare secure access for every operator on shift.</h2>
+      <p>
+        Create a verified account before connecting your robot, telemetry feeds, and cleaning preferences.
+      </p>
+
+      @if (pendingEmail()) {
+        <div class="pending-banner" role="status">
+          Verification pending for {{ pendingEmail() }}.
+        </div>
+      }
+
+      <a routerLink="/login" class="text-link">Return to sign in</a>
+    </div>
+
+    <app-auth-form mode="signup" (formSubmitted)="onSignup($event)" />
+  </section>
+</main>

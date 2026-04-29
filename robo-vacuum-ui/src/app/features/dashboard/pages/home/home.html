@@ -1,0 +1,52 @@
+<main class="dashboard-shell">
+  <section class="dashboard-hero">
+    <div class="dashboard-copy">
+      <p class="dashboard-kicker">Dashboard</p>
+      <h1>Monitor robot health and control cleaning sessions in one place.</h1>
+      <p class="dashboard-subtitle">
+        This starter dashboard uses local placeholder state so the layout and feature boundaries are ready before backend telemetry lands.
+      </p>
+
+      <div class="hero-actions">
+        <button type="button" class="primary-action" (click)="connectDemoDevice()">
+          Select demo device
+        </button>
+        <button type="button" class="secondary-action" (click)="openDeviceMap()">
+          Open device map
+        </button>
+      </div>
+    </div>
+
+    <app-cleaning-map
+      [currentRoom]="selectedRoom()"
+      [progress]="mapProgress()"
+      [robotX]="robotX()"
+      [robotY]="robotY()"
+      selectedDeviceId="rv-lab-01"
+    />
+  </section>
+
+  <section class="dashboard-grid">
+    <app-status-summary
+      [batteryLevel]="batteryLevel()"
+      [currentRoom]="selectedRoom()"
+      [currentState]="isCleaning() ? 'cleaning' : 'idle'"
+    />
+
+    <div class="dashboard-aside">
+      <app-start-stop-control
+        [deviceName]="deviceName()"
+        [activeMode]="activeMode()"
+        [isRunning]="isCleaning()"
+        (cleaningToggled)="setCleaningState($event)"
+        (startRequested)="startCleaning()"
+        (stopRequested)="stopCleaning()"
+      />
+
+      <app-tank-status
+        [waterLevel]="waterLevel()"
+        [dustbinLevel]="dustbinLevel()"
+      />
+    </div>
+  </section>
+</main>

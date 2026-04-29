@@ -1,0 +1,19 @@
+<section class="battery-card">
+  <div class="battery-header">
+    <div>
+      <p class="battery-kicker">Battery Indicator</p>
+      <h3>{{ label() }}</h3>
+    </div>
+    <span class="battery-pill" [class.battery-pill-charging]="charging()">
+      {{ statusLabel() }}
+    </span>
+  </div>
+
+  <app-progress-bar
+    [label]="label()"
+    [value]="level()"
+    [tone]="tone()"
+  />
+
+  <p class="battery-meta">Updated {{ lastUpdated() }}</p>
+</section>

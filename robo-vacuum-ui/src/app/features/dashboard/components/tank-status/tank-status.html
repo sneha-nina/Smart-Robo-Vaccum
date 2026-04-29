@@ -1,0 +1,18 @@
+<section class="tank-card">
+  <div class="tank-copy">
+    <p class="tank-kicker">Consumables</p>
+    <h3>Tank and dustbin status</h3>
+  </div>
+
+  <app-progress-bar
+    label="Water tank"
+    [value]="waterLevel()"
+    tone="primary"
+  />
+
+  <app-progress-bar
+    label="Dustbin load"
+    [value]="dustbinLevel()"
+    tone="warning"
+  />
+</section>

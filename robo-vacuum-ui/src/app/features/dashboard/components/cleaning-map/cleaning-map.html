@@ -1,0 +1,27 @@
+<section class="map-card">
+  <div class="map-header">
+    <div>
+      <p class="map-kicker">Cleaning Map</p>
+      <h3>{{ currentRoom() }}</h3>
+    </div>
+    <span class="map-pill">{{ selectedDeviceId() }}</span>
+  </div>
+
+  <div class="map-surface" aria-label="Floor cleaning map preview">
+    <div class="map-grid"></div>
+    <div class="room room-living">Living</div>
+    <div class="room room-kitchen">Kitchen</div>
+    <div class="room room-hall">Hall</div>
+    <div class="room room-dock">Dock</div>
+    <span
+      class="robot-marker"
+      [style.left.%]="robotX()"
+      [style.top.%]="robotY()"
+      aria-hidden="true"
+    >
+      <span class="robot-core"></span>
+    </span>
+  </div>
+
+  <p class="map-footer">{{ progressLabel() }}</p>
+</section>

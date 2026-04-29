@@ -1,0 +1,66 @@
+:host {
+  display: block;
+}
+
+.auth-shell {
+  min-height: 100dvh;
+  padding: 2rem 1rem;
+  background:
+    radial-gradient(circle at top left, rgba(64, 122, 182, 0.18), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(96, 204, 183, 0.16), transparent 26%),
+    linear-gradient(180deg, #eef6fb 0%, #fbfeff 100%);
+}
+
+.auth-panel {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.auth-intro {
+  display: grid;
+  gap: 1rem;
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #2270ab;
+}
+
+.auth-intro h2,
+.auth-intro p {
+  margin: 0;
+}
+
+.auth-intro h2 {
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  line-height: 0.95;
+  color: #14314b;
+}
+
+.auth-intro p {
+  max-width: 34rem;
+  color: #56718a;
+  line-height: 1.6;
+}
+
+.success-banner {
+  padding: 0.95rem 1rem;
+  border-radius: 1rem;
+  background: #eaf8f0;
+  color: #2f8a5c;
+  font-weight: 700;
+}
+
+.text-link {
+  color: #216ca6;
+  font-weight: 700;
+  text-decoration: none;
+}

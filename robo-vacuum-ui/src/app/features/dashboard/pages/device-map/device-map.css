@@ -1,0 +1,57 @@
+:host {
+  display: block;
+}
+
+.map-shell {
+  min-height: 100dvh;
+  padding: 2rem 1rem 3rem;
+  background:
+    radial-gradient(circle at top left, rgba(47, 126, 184, 0.16), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(89, 196, 164, 0.14), transparent 28%),
+    linear-gradient(180deg, #edf6fb 0%, #fbfeff 100%);
+}
+
+.map-layout {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.map-copy {
+  display: grid;
+  gap: 1rem;
+}
+
+.map-kicker {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #216ca6;
+}
+
+.map-copy h1,
+.map-copy p {
+  margin: 0;
+}
+
+.map-copy h1 {
+  font-size: clamp(2.3rem, 5vw, 3.8rem);
+  line-height: 0.94;
+  color: #14314b;
+}
+
+.map-copy p {
+  color: #56718a;
+  line-height: 1.6;
+}
+
+.text-link {
+  color: #216ca6;
+  font-weight: 700;
+  text-decoration: none;
+}

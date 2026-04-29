@@ -1,0 +1,72 @@
+:host {
+  display: block;
+}
+
+.device-shell {
+  min-height: 100dvh;
+  padding: 2rem 1rem 3rem;
+  background:
+    radial-gradient(circle at top left, rgba(47, 126, 184, 0.16), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(89, 196, 164, 0.14), transparent 28%),
+    linear-gradient(180deg, #edf6fb 0%, #fbfeff 100%);
+}
+
+.device-hero,
+.device-grid {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.device-hero {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  align-items: center;
+}
+
+.device-grid {
+  margin-top: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.device-copy {
+  display: grid;
+  gap: 1rem;
+}
+
+.device-kicker {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #216ca6;
+}
+
+.device-copy h1,
+.device-subtitle {
+  margin: 0;
+}
+
+.device-copy h1 {
+  font-size: clamp(2.3rem, 5vw, 4rem);
+  line-height: 0.94;
+  color: #14314b;
+}
+
+.device-subtitle {
+  max-width: 38rem;
+  color: #56718a;
+  line-height: 1.6;
+}
+
+.primary-action {
+  width: fit-content;
+  padding: 0.95rem 1.2rem;
+  border: 0;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #216ca6, #53b6cc);
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+}

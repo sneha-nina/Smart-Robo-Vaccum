@@ -1,0 +1,21 @@
+<main class="auth-shell">
+  <section class="auth-panel">
+    <div class="auth-intro">
+      <p class="eyebrow">Sign In</p>
+      <h2>Bring your robot fleet online from one control surface.</h2>
+      <p>
+        Use your operator account to launch cleaning cycles, monitor live telemetry, and review device health.
+      </p>
+
+      @if (lastLoginEmail()) {
+        <div class="success-banner" role="status">
+          Session created for {{ lastLoginEmail() }}. Dashboard routing can hook in next.
+        </div>
+      }
+
+      <a routerLink="/signup" class="text-link">Create a new operator account</a>
+    </div>
+
+    <app-auth-form mode="login" (formSubmitted)="onLogin($event)" />
+  </section>
+</main>

@@ -1,0 +1,55 @@
+<section class="pad-card">
+  <div class="pad-copy">
+    <p class="pad-kicker">Manual Control</p>
+    <h3>Drive the robot directly when needed</h3>
+  </div>
+
+  <div class="pad-grid">
+    <div class="pad-center pad-empty"></div>
+    <app-icon-button
+      label="Forward"
+      ariaLabel="Move forward"
+      icon="north"
+      variant="secondary"
+      [disabled]="disabled()"
+      (pressed)="commandIssued.emit('forward')"
+    />
+    <div class="pad-center pad-empty"></div>
+
+    <app-icon-button
+      label="Left"
+      ariaLabel="Turn left"
+      icon="west"
+      variant="secondary"
+      [disabled]="disabled()"
+      (pressed)="commandIssued.emit('left')"
+    />
+    <app-icon-button
+      label="Dock"
+      ariaLabel="Return to dock"
+      icon="home"
+      variant="ghost"
+      [disabled]="disabled()"
+      (pressed)="commandIssued.emit('dock')"
+    />
+    <app-icon-button
+      label="Right"
+      ariaLabel="Turn right"
+      icon="east"
+      variant="secondary"
+      [disabled]="disabled()"
+      (pressed)="commandIssued.emit('right')"
+    />
+
+    <div class="pad-center pad-empty"></div>
+    <app-icon-button
+      label="Backward"
+      ariaLabel="Move backward"
+      icon="south"
+      variant="secondary"
+      [disabled]="disabled()"
+      (pressed)="commandIssued.emit('backward')"
+    />
+    <div class="pad-center pad-empty"></div>
+  </div>
+</section>

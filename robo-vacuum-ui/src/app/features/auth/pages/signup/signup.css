@@ -1,0 +1,66 @@
+:host {
+  display: block;
+}
+
+.signup-shell {
+  min-height: 100dvh;
+  padding: 2rem 1rem;
+  background:
+    radial-gradient(circle at top right, rgba(54, 166, 130, 0.14), transparent 28%),
+    radial-gradient(circle at bottom left, rgba(34, 108, 166, 0.14), transparent 32%),
+    linear-gradient(180deg, #f4fbf8 0%, #fbfeff 100%);
+}
+
+.signup-panel {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.signup-intro {
+  display: grid;
+  gap: 1rem;
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #2f8a5c;
+}
+
+.signup-intro h2,
+.signup-intro p {
+  margin: 0;
+}
+
+.signup-intro h2 {
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  line-height: 0.97;
+  color: #14314b;
+}
+
+.signup-intro p {
+  max-width: 34rem;
+  color: #56718a;
+  line-height: 1.6;
+}
+
+.pending-banner {
+  padding: 0.95rem 1rem;
+  border-radius: 1rem;
+  background: #eef8f2;
+  color: #2f8a5c;
+  font-weight: 700;
+}
+
+.text-link {
+  color: #216ca6;
+  font-weight: 700;
+  text-decoration: none;
+}

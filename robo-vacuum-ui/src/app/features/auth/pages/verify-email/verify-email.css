@@ -1,0 +1,58 @@
+:host {
+  display: block;
+}
+
+.verify-shell {
+  min-height: 100dvh;
+  padding: 2rem 1rem;
+  background:
+    radial-gradient(circle at top left, rgba(68, 177, 123, 0.14), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(47, 126, 184, 0.15), transparent 24%),
+    linear-gradient(180deg, #f4fbf8 0%, #fbfeff 100%);
+}
+
+.verify-layout {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.verify-side {
+  display: grid;
+  gap: 1rem;
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #2f8a5c;
+}
+
+.verify-side h2,
+.verify-side p {
+  margin: 0;
+}
+
+.verify-side h2 {
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  line-height: 0.97;
+  color: #14314b;
+}
+
+.verify-side p {
+  max-width: 34rem;
+  color: #56718a;
+  line-height: 1.6;
+}
+
+.text-link {
+  color: #216ca6;
+  font-weight: 700;
+  text-decoration: none;
+}

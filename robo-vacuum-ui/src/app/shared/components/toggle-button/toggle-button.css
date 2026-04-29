@@ -1,0 +1,80 @@
+:host {
+  display: inline-block;
+}
+
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.9rem;
+  min-width: 12rem;
+  padding: 0.8rem 1rem;
+  border: 1px solid #d9e4ee;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #18324a;
+  cursor: pointer;
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    background 180ms ease;
+}
+
+.toggle:hover:not(:disabled) {
+  border-color: #73a8d2;
+  box-shadow: 0 8px 24px rgba(47, 126, 184, 0.16);
+}
+
+.toggle:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.toggle-copy {
+  display: grid;
+  text-align: left;
+}
+
+.toggle-label {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.toggle-state {
+  font-size: 0.82rem;
+  color: #58738d;
+}
+
+.toggle-track {
+  position: relative;
+  width: 2.8rem;
+  height: 1.6rem;
+  border-radius: 999px;
+  background: #d7e3ef;
+  transition: background 180ms ease;
+}
+
+.toggle-thumb {
+  position: absolute;
+  top: 0.15rem;
+  left: 0.15rem;
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 4px 10px rgba(17, 38, 58, 0.2);
+  transition: transform 180ms ease;
+}
+
+.toggle-on {
+  border-color: #6ec3a0;
+  background: #effaf4;
+}
+
+.toggle-on .toggle-track {
+  background: #3cb27d;
+}
+
+.toggle-on .toggle-thumb {
+  transform: translateX(1.2rem);
+}

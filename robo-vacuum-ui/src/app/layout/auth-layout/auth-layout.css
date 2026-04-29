@@ -1,0 +1,41 @@
+:host {
+  display: block;
+}
+
+.auth-layout-shell {
+  min-height: 100dvh;
+  background:
+    radial-gradient(circle at top left, rgba(47, 126, 184, 0.16), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(89, 196, 164, 0.14), transparent 24%),
+    linear-gradient(180deg, #eef6fb 0%, #fbfeff 100%);
+}
+
+.auth-layout-header {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  padding: 1.25rem 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.brand-mark {
+  color: #14314b;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.brand-copy {
+  margin: 0;
+  color: #59738d;
+  font-size: 0.92rem;
+}
+
+.auth-layout-content {
+  width: 100%;
+}

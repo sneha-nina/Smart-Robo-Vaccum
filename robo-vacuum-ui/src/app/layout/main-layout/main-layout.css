@@ -1,0 +1,68 @@
+:host {
+  display: block;
+}
+
+.main-layout-shell {
+  min-height: 100dvh;
+  background:
+    radial-gradient(circle at top left, rgba(47, 126, 184, 0.16), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(89, 196, 164, 0.14), transparent 24%),
+    linear-gradient(180deg, #eef6fb 0%, #fbfeff 100%);
+}
+
+.main-layout-header {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  padding: 1.25rem 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.brand-block {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.brand-mark {
+  color: #14314b;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.brand-copy {
+  margin: 0;
+  color: #59738d;
+  font-size: 0.92rem;
+}
+
+.main-nav {
+  display: flex;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  padding: 0.6rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid #d3dfeb;
+  background: rgba(255, 255, 255, 0.72);
+  color: #254661;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.nav-link-active {
+  border-color: #53b6cc;
+  background: #eef9fb;
+  color: #1f6794;
+}
+
+.main-layout-content {
+  width: 100%;
+}

@@ -1,0 +1,31 @@
+<main class="verify-shell">
+  <section class="verify-layout">
+    <div class="verify-side">
+      <p class="eyebrow">Email Checkpoint</p>
+      <h2>Verify access before live robot controls come online.</h2>
+      <p>
+        Email verification protects device commands, telemetry streams, and operator-level settings.
+      </p>
+
+      @if (verified()) {
+        <app-status-card
+          title="Verification Status"
+          value="Complete"
+          subtitle="Session token generated and ready for the next auth step."
+          tone="success"
+          icon="verified"
+        />
+      }
+
+      <a routerLink="/login" class="text-link">Back to sign in</a>
+    </div>
+
+    <app-email-verification
+      [email]="email()"
+      [resendCount]="resendCount()"
+      [verified]="verified()"
+      (verificationRequested)="confirmVerification()"
+      (resendRequested)="resendVerification()"
+    />
+  </section>
+</main>

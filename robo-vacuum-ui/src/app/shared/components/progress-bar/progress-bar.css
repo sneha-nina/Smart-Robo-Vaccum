@@ -1,0 +1,52 @@
+:host {
+  display: block;
+}
+
+.progress-shell {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.progress-label,
+.progress-value {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #35506b;
+}
+
+.progress-track {
+  overflow: hidden;
+  height: 0.75rem;
+  border-radius: 999px;
+  background: #dfe8f2;
+}
+
+.progress-fill {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  transition: width 180ms ease;
+}
+
+.tone-primary {
+  background: linear-gradient(90deg, #2f7eb8, #6bb9d4);
+}
+
+.tone-success {
+  background: linear-gradient(90deg, #2f9c67, #74d7ab);
+}
+
+.tone-warning {
+  background: linear-gradient(90deg, #d39426, #f3c86d);
+}
+
+.tone-danger {
+  background: linear-gradient(90deg, #d05858, #ef9a9a);
+}

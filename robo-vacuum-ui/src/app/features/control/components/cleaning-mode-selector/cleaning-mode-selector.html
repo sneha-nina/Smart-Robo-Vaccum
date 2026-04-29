@@ -1,0 +1,21 @@
+<section class="selector-card">
+  <div class="selector-copy">
+    <p class="selector-kicker">Cleaning Mode</p>
+    <h3>Choose how the robot should clean</h3>
+  </div>
+
+  <div class="selector-grid">
+    @for (option of options; track option.key) {
+      <button
+        type="button"
+        class="mode-option"
+        [class.mode-option-active]="selectedMode() === option.key"
+        (click)="modeSelected.emit(option.key)"
+      >
+        <span class="mode-icon" aria-hidden="true">{{ option.icon }}</span>
+        <span class="mode-label">{{ option.label }}</span>
+        <span class="mode-description">{{ option.description }}</span>
+      </button>
+    }
+  </div>
+</section>

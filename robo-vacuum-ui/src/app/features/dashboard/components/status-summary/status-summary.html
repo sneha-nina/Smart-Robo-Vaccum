@@ -1,0 +1,23 @@
+<section class="summary-grid">
+  <app-status-card
+    title="Battery"
+    [value]="batteryLevel() + '%'"
+    subtitle="Available charge"
+    tone="success"
+    icon="battery_full"
+  />
+  <app-status-card
+    title="Cleaning State"
+    [value]="currentState()"
+    subtitle="Current robot behavior"
+    tone="neutral"
+    icon="robot_2"
+  />
+  <app-status-card
+    title="Current Room"
+    [value]="currentRoom()"
+    subtitle="Latest active zone"
+    tone="warning"
+    icon="map"
+  />
+</section>

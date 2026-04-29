@@ -1,0 +1,52 @@
+<main class="device-shell">
+  <section class="device-hero">
+    <div class="device-copy">
+      <p class="device-kicker">Device Details</p>
+      <h1>{{ deviceName() }}</h1>
+      <p class="device-subtitle">
+        Review core telemetry, current placement, and connection health before wiring in full live diagnostics.
+      </p>
+
+      <button type="button" class="primary-action" (click)="loadDemoDevice()">
+        Use demo device
+      </button>
+    </div>
+
+    <app-battery-indicator
+      [level]="batteryLevel()"
+      [charging]="charging()"
+      lastUpdated="2 minutes ago"
+    />
+  </section>
+
+  <section class="device-grid">
+    <app-status-card
+      title="Device ID"
+      [value]="selectedDeviceId()"
+      subtitle="Current active device"
+      tone="neutral"
+      icon="memory"
+    />
+    <app-status-card
+      title="Connection"
+      [value]="connectionStatus()"
+      subtitle="Realtime status"
+      [tone]="statusTone()"
+      icon="wifi"
+    />
+    <app-status-card
+      title="Current Room"
+      [value]="currentRoom()"
+      subtitle="Latest active zone"
+      tone="warning"
+      icon="map"
+    />
+    <app-status-card
+      title="Last Seen"
+      [value]="lastSeen()"
+      subtitle="Most recent heartbeat"
+      tone="neutral"
+      icon="schedule"
+    />
+  </section>
+</main>

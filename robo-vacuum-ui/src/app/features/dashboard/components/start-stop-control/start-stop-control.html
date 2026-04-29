@@ -1,0 +1,32 @@
+<section class="control-card">
+  <div class="control-copy">
+    <p class="control-kicker">Cleaning Control</p>
+    <h3>{{ deviceName() }}</h3>
+    <p>Mode: {{ activeMode() }}</p>
+  </div>
+
+  <app-toggle-button
+    label="Cleaning session"
+    [checked]="isRunning()"
+    onLabel="Running"
+    offLabel="Stopped"
+    (toggled)="cleaningToggled.emit($event)"
+  />
+
+  <div class="control-actions">
+    <app-icon-button
+      label="Start"
+      icon="play_arrow"
+      variant="primary"
+      [disabled]="isRunning()"
+      (pressed)="startRequested.emit()"
+    />
+    <app-icon-button
+      label="Stop"
+      icon="stop"
+      variant="secondary"
+      [disabled]="!isRunning()"
+      (pressed)="stopRequested.emit()"
+    />
+  </div>
+</section>

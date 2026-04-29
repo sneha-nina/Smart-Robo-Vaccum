@@ -1,0 +1,10 @@
+<article [class]="toneClass()">
+  <div class="card-header">
+    <span class="card-title">{{ title() }}</span>
+    <span class="card-icon" aria-hidden="true">{{ icon() }}</span>
+  </div>
+  <div class="card-value">{{ value() }}</div>
+  @if (subtitle()) {
+    <p class="card-subtitle">{{ subtitle() }}</p>
+  }
+</article>

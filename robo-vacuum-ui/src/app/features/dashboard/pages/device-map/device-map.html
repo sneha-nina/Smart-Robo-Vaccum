@@ -1,0 +1,37 @@
+<main class="map-shell">
+  <section class="map-layout">
+    <div class="map-copy">
+      <p class="map-kicker">Device Map</p>
+      <h1>Track the robot route room by room.</h1>
+      <p>
+        This page is guarded by device selection and gives you a focused surface for spatial progress, room context, and navigation history.
+      </p>
+
+      <div class="map-links">
+        <a routerLink="/dashboard/home" class="text-link">Back to dashboard home</a>
+      </div>
+
+      <app-status-summary
+        [batteryLevel]="batteryLevel()"
+        [currentRoom]="currentRoom()"
+        currentState="cleaning"
+      />
+
+      <app-status-card
+        title="Selected Device"
+        [value]="selectedDeviceId()"
+        subtitle="Ready for live telemetry integration"
+        tone="neutral"
+        icon="memory"
+      />
+    </div>
+
+    <app-cleaning-map
+      [currentRoom]="currentRoom()"
+      [progress]="mapProgress()"
+      [robotX]="robotX()"
+      [robotY]="robotY()"
+      [selectedDeviceId]="selectedDeviceId()"
+    />
+  </section>
+</main>

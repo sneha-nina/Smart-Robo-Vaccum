@@ -1,0 +1,60 @@
+<section class="auth-card">
+  <header class="auth-copy">
+    <p class="auth-kicker">Robot Control Console</p>
+    <h1>{{ heading() }}</h1>
+    <p class="auth-subtitle">
+      Manage cleaning sessions, monitor telemetry, and keep your device fleet secure.
+    </p>
+  </header>
+
+  <form [formGroup]="form" class="auth-form" (ngSubmit)="submit()">
+    @if (showSignupFields()) {
+      <label class="field">
+        <span>Display name</span>
+        <input type="text" formControlName="displayName" placeholder="Alex Operator" />
+        @if (hasError('displayName')) {
+          <small class="field-error">Add the name that should appear in the dashboard.</small>
+        }
+      </label>
+    }
+
+    <label class="field">
+      <span>Email</span>
+      <input type="email" formControlName="email" placeholder="operator@robovac.io" />
+      @if (hasError('email')) {
+        <small class="field-error">Enter a valid email address.</small>
+      }
+    </label>
+
+    <label class="field">
+      <span>Password</span>
+      <input type="password" formControlName="password" placeholder="Minimum 8 characters" />
+      @if (hasError('password')) {
+        <small class="field-error">Password must be at least 8 characters long.</small>
+      }
+    </label>
+
+    @if (showSignupFields()) {
+      <label class="field">
+        <span>Confirm password</span>
+        <input
+          type="password"
+          formControlName="confirmPassword"
+          placeholder="Retype your password"
+        />
+      </label>
+    }
+
+    @if (formError()) {
+      <p class="form-error" role="alert">{{ formError() }}</p>
+    }
+
+    <button type="submit" class="submit-button" [disabled]="loading()">
+      {{ loading() ? 'Working...' : submitLabel() }}
+    </button>
+  </form>
+
+  <a class="alternate-link" [routerLink]="alternateRoute()">
+    {{ alternateLabel() }}
+  </a>
+</section>

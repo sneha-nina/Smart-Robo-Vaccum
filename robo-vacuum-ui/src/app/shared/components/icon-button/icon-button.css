@@ -1,0 +1,49 @@
+:host {
+  display: inline-block;
+}
+
+.icon-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 140ms ease,
+    box-shadow 180ms ease,
+    background 180ms ease;
+}
+
+.icon-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.icon-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.icon-button-glyph {
+  font-size: 1rem;
+}
+
+.variant-primary {
+  background: linear-gradient(135deg, #2475b2, #58b8cf);
+  color: #ffffff;
+  box-shadow: 0 10px 24px rgba(36, 117, 178, 0.25);
+}
+
+.variant-secondary {
+  background: #eff5fb;
+  border-color: #c6d7e9;
+  color: #1b3d5b;
+}
+
+.variant-ghost {
+  background: transparent;
+  border-color: #cfdae5;
+  color: #28445e;
+}

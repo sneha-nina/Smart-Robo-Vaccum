@@ -1,0 +1,28 @@
+<section class="verification-card">
+  <p class="verification-kicker">Verification</p>
+  <h1>{{ verified() ? 'Email verified' : 'Confirm your email address' }}</h1>
+  <p class="verification-copy">
+    @if (verified()) {
+      Your operator profile is now verified for <strong>{{ email() }}</strong>.
+    } @else {
+      We sent a verification link to <strong>{{ email() }}</strong>. Confirm it to unlock robot control features.
+    }
+  </p>
+
+  <div class="verification-actions">
+    @if (!verified()) {
+      <button type="button" class="primary-action" (click)="verificationRequested.emit()">
+        I verified my email
+      </button>
+      <button type="button" class="secondary-action" (click)="resendRequested.emit()">
+        Resend email
+      </button>
+    } @else {
+      <span class="verification-pill">Secure access enabled</span>
+    }
+  </div>
+
+  @if (resendCount() > 0 && !verified()) {
+    <p class="verification-meta">Verification email resent {{ resendCount() }} time(s).</p>
+  }
+</section>

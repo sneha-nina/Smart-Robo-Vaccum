@@ -1,0 +1,6 @@
+<div class="loader-shell" [class.loader-shell-overlay]="overlay()">
+  <div class="loader-content" role="status" aria-live="polite">
+    <span [class]="spinnerClass()" aria-hidden="true"></span>
+    <span class="loader-label">{{ label() }}</span>
+  </div>
+</div>

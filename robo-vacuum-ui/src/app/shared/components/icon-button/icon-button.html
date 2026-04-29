@@ -1,0 +1,10 @@
+<button
+  type="button"
+  [class]="buttonClass()"
+  [disabled]="disabled()"
+  [attr.aria-label]="ariaLabel()"
+  (click)="onPress()"
+>
+  <span class="icon-button-glyph" aria-hidden="true">{{ icon() }}</span>
+  <span class="icon-button-label">{{ label() }}</span>
+</button>

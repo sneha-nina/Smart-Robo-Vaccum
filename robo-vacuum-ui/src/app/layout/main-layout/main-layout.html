@@ -1,0 +1,21 @@
+<section class="main-layout-shell">
+  <header class="main-layout-header">
+    <div class="brand-block">
+      <a class="brand-mark" routerLink="/dashboard/home">Robo Vacuum UI</a>
+      <p class="brand-copy">Device monitoring, cleaning control, and map-driven operation.</p>
+    </div>
+
+    <nav class="main-nav" aria-label="Primary navigation">
+      <a routerLink="/dashboard/home" routerLinkActive="nav-link-active" class="nav-link">
+        Dashboard
+      </a>
+      <a routerLink="/dashboard/device-map" routerLinkActive="nav-link-active" class="nav-link">
+        Device Map
+      </a>
+    </nav>
+  </header>
+
+  <div class="main-layout-content">
+    <router-outlet />
+  </div>
+</section>

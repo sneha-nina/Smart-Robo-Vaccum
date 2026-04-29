@@ -1,0 +1,20 @@
+<section class="selector-card">
+  <div class="selector-copy">
+    <p class="selector-kicker">Movement Pattern</p>
+    <h3>Pick the navigation strategy</h3>
+  </div>
+
+  <div class="selector-grid">
+    @for (option of options; track option.key) {
+      <button
+        type="button"
+        class="pattern-option"
+        [class.pattern-option-active]="selectedPattern() === option.key"
+        (click)="patternSelected.emit(option.key)"
+      >
+        <span class="pattern-label">{{ option.label }}</span>
+        <span class="pattern-description">{{ option.description }}</span>
+      </button>
+    }
+  </div>
+</section>
